@@ -5,3 +5,6 @@ Each script is independent from each other
 change1
 change2
 change3
+hello there
+hello there2
+hello there3
