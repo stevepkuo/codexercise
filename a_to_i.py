@@ -69,36 +69,40 @@ def atoi_tester (askyString):
    else:
       print str(result)
 
-#TEST CASES
-#invalid inputs
-atoi_tester(unichr(1000)) #unicode character of index 1000 that is not an Ascii character => error
-atoi_tester('') #blank string should return => error
-atoi_tester(' ') #make sure space is recognized as valid input
-atoi_tester('  ') #and multiple spaces as well
+def main():
+   #TEST CASES
+   #invalid inputs
+   atoi_tester(unichr(1000)) #unicode character of index 1000 that is not an Ascii character => error
+   atoi_tester('') #blank string should return => error
+   atoi_tester(' ') #make sure space is recognized as valid input
+   atoi_tester('  ') #and multiple spaces as well
 
-#testing the legal bounds within Ascii
-atoi_tester(chr(0)) #NULL ascii character which is lowest index 0 of Ascii table; This should be -48 due to internal offset
-atoi_tester('/') # this should be -1
-atoi_tester('0') #this should be 0
-atoi_tester('0000000000000000000000000000000') #this should also be 0
-atoi_tester('1') #this should be 1
-atoi_tester(chr(254)) #ascii character which is 2nd highest index 254 of Ascii table => 206
-atoi_tester(chr(255)) #ascii character which is highest index 255 of Ascii table => 207
+   #testing the legal bounds within Ascii
+   atoi_tester(chr(0)) #NULL ascii character which is lowest index 0 of Ascii table; This should be -48 due to internal offset
+   atoi_tester('/') # this should be -1
+   atoi_tester('0') #this should be 0
+   atoi_tester('0000000000000000000000000000000') #this should also be 0
+   atoi_tester('1') #this should be 1
+   atoi_tester(chr(254)) #ascii character which is 2nd highest index 254 of Ascii table => 206
+   atoi_tester(chr(255)) #ascii character which is highest index 255 of Ascii table => 207
 
-#all integers
-atoi_tester('1') #one integer digit should return the same integer 1
-atoi_tester('1234567')#many integer digits should return the same integer 1234567
-#negative integer
-atoi_tester('-1')#should return different integer -29
-atoi_tester('-1234567')#many integer digits should return different integer -28765433
+   #all integers
+   atoi_tester('1') #one integer digit should return the same integer 1
+   atoi_tester('1234567')#many integer digits should return the same integer 1234567
+   #negative integer
+   atoi_tester('-1')#should return different integer -29
+   atoi_tester('-1234567')#many integer digits should return different integer -28765433
 
-#all letters
-atoi_tester('a') #one letter
-atoi_tester('abcdefg')# many letters
+   #all letters
+   atoi_tester('a') #one letter
+   atoi_tester('abcdefg')# many letters
 
-#mix of integers and letters
-atoi_tester('1a2b3c4d')
+   #mix of integers and letters
+   atoi_tester('1a2b3c4d')
 
-#testing the output capability of the function
-atoi_tester('/////////////////////////////////') #this should be a huge negative number
-atoi_tester('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~') #this should be a huge positive number
+   #testing the output capability of the function
+   atoi_tester('/////////////////////////////////') #this should be a huge negative number
+   atoi_tester('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~') #this should be a huge positive number
+
+if __name__ == "__main__":
+    main()

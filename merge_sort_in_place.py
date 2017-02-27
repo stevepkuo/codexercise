@@ -61,10 +61,10 @@ def combine (inputList, min, middle, max):
    #Combine 2 element, and 1 element list together
    #1,2,     3 => will need to exercise the 3rd loop to deal with 1 remaining item in right list
    #1,3,     2 => will need to exercise the 2nd loop to deal with 1 remaining item in left list
-   #2,1,     3 => will need to exercise the 3rd loop to deal with 1 remaining item in right list
-   #2,3,     1 => will need to exercise the 2nd loop to deal with 1 remaining item in left list
-   #3,1,     2 => will need to exercise the 2nd loop to deal with 1 remaining item in left list
-   #3,2,     1 => will need to exercise the 2nd loop to deal with 1 remaining item in left list
+   ##2,1,     3 => will need to exercise the 3rd loop to deal with 1 remaining item in right list
+   #2,3,     1 => will need to exercise the 2nd loop to deal with 2 remaining item in left list
+   ##3,1,     2 => will need to exercise the 2nd loop to deal with 1 remaining item in left list
+   ##3,2,     1 => will need to exercise the 2nd loop to deal with 1 remaining item in left list
 
 list = []
 mergesort(list, 0, len(list)-1)
